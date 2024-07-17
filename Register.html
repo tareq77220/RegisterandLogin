@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: url('./IrF.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; 
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+        form {
+            max-width: 400px; /* Adjust as needed */
+            padding: 20px;
+            background-color: rgba(26, 26, 26, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(51, 51, 51, 0.8);
+            border: 1px solid #00ff00;
+            color: #fff;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: rgba(26, 26, 26, 0.8);
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register for CTF Challenge</h1>
+        <form id="registerForm" action="connect.php" method="POST">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Register">
+        </form>
+        
+    </div>
+    
+    <div class="footer">
+        &copy; 2024 CTF Challenge. All rights reserved.
+    </div>
+</body>
+</html>
